@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#319DA0" />
+    <meta name="description" content="Una aplicación web donde puedes ver y puntuar restaurante según los alérgenos">
+    <meta name="keywords" content="alergenos, carta alérgenos, restaurantes, puntuación"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/stylesheets/index.css">
+    <link rel="stylesheet" type="text/css" href="./assets/stylesheets/input-range.css">
+    <link rel="stylesheet" type="text/css" href="./assets/stylesheets/input-radio.css">
+    <link rel="stylesheet" type="text/css" href="./assets/stylesheets/header.css">
+    <link rel="stylesheet" type="text/css" href="./assets/stylesheets/footer.css">
+    <link rel="stylesheet" type="text/css" href="./assets/stylesheets/checkboxes.css">
+    <script src="https://kit.fontawesome.com/e8797cc6b0.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="./assets/img/logo.png" />
+    <title>Foodiesaurus, restaurantes sin alergias</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="title-container">
+        <a href="" class="home-link" aria-label="Ir a la home">
+          <h1 class="title">
+            <span>Foodie</span>
+            <figure class="logo-container">
+              <img class="logo" width="42px" height="42px" src="./assets/img/foodiesaurus.png" alt="logo" />
+            </figure>
+            <span>saurus</span>
+          </h1>
+        </a>
+      </div>
+      <nav class="nav">
+        <div id="toggle" class="toggle">
+          <i class="toggle-item"></i>
+          <i class="toggle-item"></i>
+          <i class="toggle-item"></i>
+        </div>
+        <ul class="nav-list" id="nav">
+          <li>
+            <a class="nav-link" href="https://foodiesaurus.com/">Buscar</a>
+          </li>
+          <li>
+            <a class="nav-link" href="https://foodiesaurus.com/restaurant/search.html">Añadir restaurante</a>
+          </li>
+          <li>
+            <a class="nav-link" href="https://foodiesaurus.com/prehistory.html">Prehistoria</a>
+          </li>
+          <li>
+            <a class="nav-link" href="https://foodiesaurus.com/restaurant-owner.html">Soy un restaurante</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main add-restaurant container" id="main">
+      <h2>Añadir restaurante</h2>
+      <ul class="info-list">
+        <li class="info-list-item">Aquí podrás registrar un nuevo restaurante</li>
+        <li class="info-list-item">Asegúrate de que no existe antes de crearlo usando la búsqueda</li>
+        <li class="info-list-item">Los campos con un asterisco (*) son obligatorios</li>
+      </ul>
+      <form class="add-restaurant-form" id="form">
+        <h3>Datos generales</h3>
+        <div class="input-group">
+          <p class="input-label">Nombre del restaurante*: </p>
+          <input pattern="^(?!.*<[^>]+>).*"  class="input" id="name" name="name" type="text" required />
+        </div>
+        <div class="input-group">
+          <p class="input-label">Dirección*: </p>
+          <input pattern="^(?!.*<[^>]+>).*"  class="input" id="address" name="address" type="text" required />
+        </div>
+        <div class="input-group">
+          <p class="input-label">Tipo de comida: </p>
+          <select name="foodType" id="foodType" class="select">
+            <option selected disabled value="">Escoge el tipo</option>
+          </select>
+        </div>
+        <h3>Tu opinión sobre alérgenos</h3>
+        <div class="input-group">
+          <p class="input-label" for="attentionScore">Atención recibida por el personal*: </p>
+          <div class="range-input-container">
+            <input class="range-input" id="attentionScore" name="attentionScore" value="5" type="range" min="1" max="10" required oninput="numberAttention.value=value"/>
+            <div class="range-container">
+              <output type="number" class="range-number" id="numberAttention" min="1" max="10" value="5" disabled>5</output>
+              <span class="total-range">/10</span>
+            </div>
+          </div>
+        </div>
+        <div class="checkbox-group">
+          <input class="input checkbox" id="allergicReaction" name="allergicReaction" type="checkbox" />
+          <p class="" for="allergicReaction">¿Tuviste una reacción alérgica?</p>
+        </div>
+        <div class="input-group">
+          <p class="input-label">Comentario: </p>
+          <textarea id="comment" name="comment" rows="4" cols="10"></textarea>
+        </div>
+        <h3>Opciones alimentarias que ofrecen</h3>
+        <div>
+          <p class="radio-title">Opciones celíacas</p>
+          <div class="radio-container">
+            <div class="input-radio">
+              <input type="radio" id="celiacYes" name="celiac" value="0">
+              <p for="celiacYes">Sí</p>
+            </div>
+            <div class="input-radio">
+              <input type="radio" id="celiacNo" name="celiac" value="1">
+              <p for="celiacNo">No</p>
+            </div>
+            <div class="input-radio">
+              <input type="radio" id="celiacIDK" name="celiac" value="2" checked>
+              <p for="celiacIDK">No sé</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="radio-title">Opciones diabéticas</p>
+          <div class="radio-container">
+            <div class="input-radio">
+              <input type="radio" id="diabetesYes" name="diabetes" value="0">
+              <p for="diabetesYes">Sí</p>
+            </div>
+            <div class="input-radio">
+              <input type="radio" id="diabetesNo" name="diabetes" value="1">
+              <p for="diabetesNo">No</p>
+            </div>
+            <div class="input-radio">
+              <input type="radio" id="diabetesIDK" name="diabetes" value="2" checked>
+              <p for="diabetesIDK">No sé</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="radio-title">Opciones para intolerantes a la lactosa</p>
+          <div class="radio-container">
+            <div class="input-radio">
+              <input type="radio" id="lactoseYes" name="lactose" value="0">
+              <p for="lactoseYes">Sí</p>
+            </div>
+            <div class="input-radio">
+              <input type="radio" id="lactoseNo" name="lactose" value="1">
+              <p for="lactoseNo">No</p>
+            </div>
+            <div class="input-radio">
+              <input type="radio" id="lactoseIDK" name="lactose" value="2" checked>
+              <p for="lactoseIDK">No sé</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="radio-title">Opciones vegetarianas</p>
+          <div class="radio-container">
+            <div class="input-radio">
+              <input type="radio" id="vegetarianYes" name="vegetarian" value="0">
+              <p for="vegetarianYes">Sí</p>
+            </div>
+            <div class="input-radio">
+              <input type="radio" id="vegetarianNo" name="vegetarian" value="1">
+              <p for="vegetarianNo">No</p>
+            </div>
+            <div class="input-radio">
+              <input type="radio" id="vegetarianIDK" name="vegetarian" value="2" checked>
+              <p for="vegetarianIDK">No sé</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="radio-title">Opciones veganas</p>
+          <div class="radio-container">
+            <div class="input-radio">
+              <input type="radio" id="veganYes" name="vegan" value="0">
+              <p for="veganYes">Sí</p>
+            </div>
+            <div class="input-radio">
+              <input type="radio" id="veganNo" name="vegan" value="1">
+              <p for="veganNo">No</p>
+            </div>
+            <div class="input-radio">
+              <input type="radio" id="veganIDK" name="vegan" value="2" checked>
+              <p for="veganIDK">No sé</p>
+            </div>              
+          </div>
+        </div>
+        <div id="feedback" class="hidden">Restaurante creado</div>
+        <button type="submit" class="primary-button" id="buttonSubmit">
+          Añadir restaurante
+        </button>
+      </form>
+    </main>
+    <footer class="footer">
+      <div>
+        <div class="footer__logo">
+          <p>Foodie</p>
+          <figure class="footer-img">
+            <img class="img" alt="logo"  width="42px" height="42px" src="./assets/img/foodiesaurus-transparent.png"  />
+           </figure>
+          <p>saurus</p>
+        </div>
+        <p class="copyright">Foodiesaurus©, restaurantes sin alergias</p>
+      </div>
+      <div class="footer__container">
+        <p class="footer__by">Por <a href="https://miasalazar.netlify.app/" class="footer__name" target="_blank">Mia Salazar</a></p>
+        <ul class="footer__list">
+          <li><a href="https://twitter.com/miadeveloper"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/miasalazar/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+          <li><a href="https://dev.to/miasalazar"><i class="fa-brands fa-dev"></i></a></li>
+          <li><a href="https://marasalazar.medium.com/"><i class="fa-brands fa-medium"></i></a></li>
+          <li><a href="https://github.com/Mia-Salazar"><i class="fa-brands fa-github"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+  <script type="text/javascript" src="./js/shared.js"></script>
+</html>
