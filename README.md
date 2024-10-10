@@ -1,5 +1,5 @@
 # Legacy Code y Accesibilidad: mejorando nuestros proyecto
-En este repositorio encontraremos el proyecto sobre el que tratará el taller "Legacy Code y Accesibilidad: mejorando nuestros proyectos" que se impartirá en [GDG Madrid](https://gdg.community.dev/gdg-madrid/) el día 22 de noviembre en el [DevFest Madrid 2024] (https://gdg.community.dev/events/details/google-gdg-madrid-presents-devfest-madrid-2024/)
+En este repositorio encontraremos el proyecto sobre el que tratará el taller "Legacy Code y Accesibilidad: mejorando nuestros proyectos" que se impartirá en [GDG Madrid](https://gdg.community.dev/gdg-madrid/) el día 22 de noviembre en el [DevFest Madrid 2024](https://gdg.community.dev/events/details/google-gdg-madrid-presents-devfest-madrid-2024/)
 
 ## Configuraciones iniciales
 Para poder realizar el taller hay que realizar una serie de pasos
