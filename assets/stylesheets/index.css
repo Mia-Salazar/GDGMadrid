@@ -24,9 +24,9 @@ body {
 	color: var(--black);
 }
 
-/* * {
+* {
 	outline: none !important;
-} */
+}
 
 .logo-text {
 	font-family: var(--primaryTypo);
