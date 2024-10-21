@@ -1,11 +1,17 @@
 /*Header*/
 .header {
 	display:  flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
 	padding: 5px 0.938rem;
 	background-color: var(--primaryColor);
 	font-family: var(--primaryTypo);
+}
+
+.header .title {
+	margin: 0;
+	color:  var(--white);
+	font-weight: 500;
 }
 
 /*Mi cuenta dropdown*/
@@ -110,16 +116,11 @@
 
 /*Hamburguer menu*/
 @media (max-width: 767px) {
-
-	.copyright  {
-		position: absolute;
-		bottom: 1rem;
-	}
-
 	.toggle {
+		position: absolute;
+    	right: 16px;
 		width: 2.25rem;
 		height: 2rem;
-		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;

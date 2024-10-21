@@ -120,12 +120,6 @@ p {
 	text-decoration: none;
 }
 
-.header .title {
-	margin: 0;
-	color:  var(--white);
-	font-weight: 500;
-}
-
 .title-container {
 	display:  flex;
 	align-items: center;
