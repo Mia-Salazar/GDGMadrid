@@ -1,42 +1,37 @@
 /*Hamburguer menu*/
-
-const menu = document.getElementById("nav");
+const navList = document.getElementById("navList");
 const toggle = document.getElementById("toggle");
-const navList = document.querySelectorAll("#nav li");
-
-const dropdown = document.getElementById("account-dropdown-list");
-const dropdownButton = document.getElementById("account-dropdown-button");
+const nav = document.getElementById("nav");
 
 if (toggle) {
   toggle.addEventListener("click", toggleMenu, false);
 }
 
-if (dropdownButton) {
-  dropdownButton.addEventListener("click", dropdownToggle, false);
-}
-
 let isMenuOpen = false;
 function toggleMenu() {
+  console.log(window.innerWidth)
   if (!isMenuOpen) {
-    menu.classList.add("open");
+    navList.classList.add("open");
     toggle.classList.add("open");
+    toggle.setAttribute("aria-label", "Cerrar menú")
+    toggle.setAttribute("aria-expanded", "true") 
+    nav.setAttribute("aria-hidden", "false")
+    nav.classList.remove("hidden");
   } else {
-    menu.classList.remove("open");
+    navList.classList.remove("open");
     toggle.classList.remove("open");
+    toggle.setAttribute("aria-label", "Abrir menú")
+    toggle.setAttribute("aria-expanded", "true") 
+    nav.setAttribute("aria-hidden", "true")
+    nav.classList.add("hidden");
   }
   isMenuOpen = !isMenuOpen;
 }
 
-let isDropdownOpen = false;
-function dropdownToggle() {
-  if (!isDropdownOpen) {
-    dropdown.classList.add("open");
-    dropdownButton.setAttribute("aria-expanded", "true");
-  } else {
-    dropdown.classList.remove("open");
-    dropdownButton.setAttribute("aria-expanded", "false");
-  }
-  isDropdownOpen = !isDropdownOpen;
+/*Show on desktop menú*/
+if (window.innerWidth >= 768) {
+  nav.setAttribute("aria-hidden", "false") 
+  nav.classList.remove("hidden");
 }
 
 
@@ -57,9 +52,42 @@ const foodSelect = document.getElementById("foodType");
 
 const foodTypeOrderes = foodType.sort();
 foodTypeOrderes.forEach((food) => {
-    let option = document.createElement("option");
-    option.value = food;
-    option.innerHTML = food;
-    foodSelect.appendChild(option);
+  let option = document.createElement("option");
+  option.value = food;
+  option.innerHTML = food;
+  foodSelect.appendChild(option);
 });
+
+
+/*Range inputs*/
+const rangeInputs = document.querySelectorAll('.range-input')
+const numberInput = document.querySelector('.range-number')
+
+const changeInputRangeBackground = (input, value) => {
+  const min = input.min;
+  const max = input.max;
+  input.style.backgroundSize = calculateInputRange(value, min, max);
+}
+
+const calculateInputRange = (val, min, max) => {
+  const result = (val - min) * 100 / (max - min);
+  const hasPositiveValue = result > 0 ? result : 0;
+  return hasPositiveValue + '% 100%';
+}
+
+function handleInputChange(e) {
+  let target = e.target 
+  const min = target.min
+  const max = target.max
+  const val = target.value
+  
+  target.style.backgroundSize = calculateInputRange(val, min, max);
+}
+
+rangeInputs.forEach(input => {
+  input.addEventListener('input', handleInputChange)
+})
+
+numberInput.addEventListener('input', handleInputChange)
+
 

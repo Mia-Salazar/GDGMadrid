@@ -44,6 +44,24 @@
 	margin-bottom: 4px;
 }
 
+.skip-to-content-link {
+	background: var(--secondaryColor);
+    color: var(--white);
+    height: 30px;
+    top: -50%;
+    left: 50%;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+    padding: 0.688rem 1rem 0 1rem;
+}
+
+.skip-to-content-link:focus {
+    transform: translateY(0%);
+	top: 0;
+	right: 0;
+}
+
 /*Nav*/
 .nav-list {
 	display: flex;
@@ -117,6 +135,8 @@
 /*Hamburguer menu*/
 @media (max-width: 767px) {
 	.toggle {
+		background-color: transparent;
+		border: none;
 		position: absolute;
     	right: 16px;
 		width: 2.25rem;

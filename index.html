@@ -24,6 +24,9 @@
     <title>Foodiesaurus, restaurantes sin alergias</title>
   </head>
   <body>
+    <a class="skip-to-content-link" href="#main">
+      Saltar al contenido
+    </a>
     <header class="header">
       <div class="title-container">
         <a href="" class="home-link" aria-label="Ir a la home">
@@ -36,14 +39,13 @@
           </h1>
         </a>
       </div>
-      <div id="toggle" class="toggle">
-        <i class="toggle-item"></i>
-        <i class="toggle-item"></i>
-        <i class="toggle-item"></i>
-      </div>
-      <nav class="nav">
-
-        <ul class="nav-list" id="nav">
+      <button id="toggle" class="toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <i aria-hidden="true" class="toggle-item"></i>
+        <i aria-hidden="true" class="toggle-item"></i>
+        <i aria-hidden="true" class="toggle-item"></i>
+      </button>
+      <nav class="nav hidden" id="nav" aria-hidden="true">
+        <ul class="nav-list" id="navList">
           <li>
             <a class="nav-link" href="https://foodiesaurus.com/">Buscar</a>
           </li>
@@ -69,22 +71,22 @@
       <form class="add-restaurant-form" id="form">
         <h3>Datos generales</h3>
         <div class="input-group">
-          <p class="input-label">Nombre del restaurante*: </p>
-          <input pattern="^(?!.*<[^>]+>).*"  class="input" id="name" name="name" type="text" required />
+          <label for="name" class="input-label">Nombre del restaurante*: </label>
+          <input placeholder="Taylor`s restaurant" pattern="^(?!.*<[^>]+>).*"  class="input" id="name" name="name" type="text" required />
         </div>
         <div class="input-group">
-          <p class="input-label">Dirección*: </p>
-          <input pattern="^(?!.*<[^>]+>).*"  class="input" id="address" name="address" type="text" required />
+          <label for="address" class="input-label">Dirección*: </label>
+          <input placeholder="Cornelia Street" pattern="^(?!.*<[^>]+>).*"  class="input" id="address" name="address" type="text" required />
         </div>
         <div class="input-group">
-          <p class="input-label">Tipo de comida: </p>
+          <label for="foodType" class="input-label">Tipo de comida: </label>
           <select name="foodType" id="foodType" class="select">
             <option selected disabled value="">Escoge el tipo</option>
           </select>
         </div>
         <h3>Tu opinión sobre alérgenos</h3>
         <div class="input-group">
-          <p class="input-label" for="attentionScore">Atención recibida por el personal*: </p>
+          <label class="input-label" for="attentionScore">Atención recibida por el personal*: </label>
           <div class="range-input-container">
             <input class="range-input" id="attentionScore" name="attentionScore" value="5" type="range" min="1" max="10" required oninput="numberAttention.value=value"/>
             <div class="range-container">
@@ -95,99 +97,99 @@
         </div>
         <div class="checkbox-group">
           <input class="input checkbox" id="allergicReaction" name="allergicReaction" type="checkbox" />
-          <p class="" for="allergicReaction">¿Tuviste una reacción alérgica?</p>
+          <label for="allergicReaction" class="" for="allergicReaction">¿Tuviste una reacción alérgica?</label>
         </div>
         <div class="input-group">
-          <p class="input-label">Comentario: </p>
+          <label for="comment" class="input-label">Comentario: </label>
           <textarea id="comment" name="comment" rows="4" cols="10"></textarea>
         </div>
         <h3>Opciones alimentarias que ofrecen</h3>
-        <div>
-          <p class="radio-title">Opciones celíacas</p>
+        <fieldset>
+          <legend class="radio-title">Opciones celíacas</legend>
           <div class="radio-container">
             <div class="input-radio">
               <input type="radio" id="celiacYes" name="celiac" value="0">
-              <p for="celiacYes">Sí</p>
+              <label for="celiacYes">Sí</label>
             </div>
             <div class="input-radio">
               <input type="radio" id="celiacNo" name="celiac" value="1">
-              <p for="celiacNo">No</p>
+              <label for="celiacNo">No</label>
             </div>
             <div class="input-radio">
               <input type="radio" id="celiacIDK" name="celiac" value="2" checked>
-              <p for="celiacIDK">No sé</p>
+              <label for="celiacIDK">No sé</label>
             </div>
           </div>
-        </div>
-        <div>
-          <p class="radio-title">Opciones diabéticas</p>
+        </fieldset>
+        <fieldset>
+          <legend class="radio-title">Opciones diabéticas</legend>
           <div class="radio-container">
             <div class="input-radio">
               <input type="radio" id="diabetesYes" name="diabetes" value="0">
-              <p for="diabetesYes">Sí</p>
+              <label for="diabetesYes">Sí</label>
             </div>
             <div class="input-radio">
               <input type="radio" id="diabetesNo" name="diabetes" value="1">
-              <p for="diabetesNo">No</p>
+              <label for="diabetesNo">No</label>
             </div>
             <div class="input-radio">
               <input type="radio" id="diabetesIDK" name="diabetes" value="2" checked>
-              <p for="diabetesIDK">No sé</p>
+              <label for="diabetesIDK">No sé</label>
             </div>
           </div>
-        </div>
-        <div>
-          <p class="radio-title">Opciones para intolerantes a la lactosa</p>
+        </fieldset>
+        <fieldset>
+          <legend class="radio-title">Opciones para intolerantes a la lactosa</legend>
           <div class="radio-container">
             <div class="input-radio">
               <input type="radio" id="lactoseYes" name="lactose" value="0">
-              <p for="lactoseYes">Sí</p>
+              <label for="lactoseYes">Sí</label>
             </div>
             <div class="input-radio">
               <input type="radio" id="lactoseNo" name="lactose" value="1">
-              <p for="lactoseNo">No</p>
+              <label for="lactoseNo">No</label>
             </div>
             <div class="input-radio">
               <input type="radio" id="lactoseIDK" name="lactose" value="2" checked>
-              <p for="lactoseIDK">No sé</p>
+              <label for="lactoseIDK">No sé</label>
             </div>
           </div>
-        </div>
-        <div>
-          <p class="radio-title">Opciones vegetarianas</p>
+        </fieldset>
+        <fieldset>
+          <legend class="radio-title">Opciones vegetarianas</legend>
           <div class="radio-container">
             <div class="input-radio">
               <input type="radio" id="vegetarianYes" name="vegetarian" value="0">
-              <p for="vegetarianYes">Sí</p>
+              <label for="vegetarianYes">Sí</label>
             </div>
             <div class="input-radio">
               <input type="radio" id="vegetarianNo" name="vegetarian" value="1">
-              <p for="vegetarianNo">No</p>
+              <label for="vegetarianNo">No</label>
             </div>
             <div class="input-radio">
               <input type="radio" id="vegetarianIDK" name="vegetarian" value="2" checked>
-              <p for="vegetarianIDK">No sé</p>
+              <label for="vegetarianIDK">No sé</label>
             </div>
           </div>
-        </div>
-        <div>
-          <p class="radio-title">Opciones veganas</p>
+        </fieldset>
+        <fieldset>
+          <legend class="radio-title">Opciones veganas</legend>
           <div class="radio-container">
             <div class="input-radio">
               <input type="radio" id="veganYes" name="vegan" value="0">
-              <p for="veganYes">Sí</p>
+              <label for="veganYes">Sí</label>
             </div>
             <div class="input-radio">
               <input type="radio" id="veganNo" name="vegan" value="1">
-              <p for="veganNo">No</p>
+              <label for="veganNo">No</label>
             </div>
             <div class="input-radio">
               <input type="radio" id="veganIDK" name="vegan" value="2" checked>
-              <p for="veganIDK">No sé</p>
+              <label for="veganIDK">No sé</label>
             </div>              
           </div>
-        </div>
-        <div id="feedback" class="hidden">Restaurante creado</div>
+        </fieldset>
+        <div id="feedback" class="hidden" role="alert">Restaurante creado</div>
         <button type="submit" class="primary-button" id="buttonSubmit">
           Añadir restaurante
         </button>
@@ -207,11 +209,11 @@
       <div class="footer__container">
         <p class="footer__by">Por <a href="https://miasalazar.netlify.app/" class="footer__name" target="_blank">Mia Salazar</a></p>
         <ul class="footer__list">
-          <li><a href="https://twitter.com/miadeveloper"><i class="fa-brands fa-twitter"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/miasalazar/"><i class="fa-brands fa-linkedin-in"></i></a></li>
-          <li><a href="https://dev.to/miasalazar"><i class="fa-brands fa-dev"></i></a></li>
-          <li><a href="https://marasalazar.medium.com/"><i class="fa-brands fa-medium"></i></a></li>
-          <li><a href="https://github.com/Mia-Salazar"><i class="fa-brands fa-github"></i></a></li>
+          <li><a href="https://twitter.com/miadeveloper" aria-label="Ir a Twitter"><i aria-hidden="true" class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/miasalazar/" aria-label="Ir a Linkedin"><i aria-hidden="true" class="fa-brands fa-linkedin-in"></i></a></li>
+          <li><a href="https://dev.to/miasalazar" aria-label="Ir a Dev.to"><i aria-hidden="true" class="fa-brands fa-dev"></i></a></li>
+          <li><a href="https://marasalazar.medium.com/" aria-label="Ir a Medium"><i aria-hidden="true" class="fa-brands fa-medium"></i></a></li>
+          <li><a href="https://github.com/Mia-Salazar" aria-label="Ir a Github"><i aria-hidden="true" class="fa-brands fa-github"></i></a></li>
         </ul>
       </div>
     </footer>
