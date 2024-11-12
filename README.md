@@ -39,7 +39,7 @@ Pulsar en VoiceOver y pulsar en el checkbox de Activar
 ![Paso 2](https://github.com/Mia-Salazar/GDGMadrid/blob/main/assets/img/voice-over-2.jpeg)
 
 Pulsar en Usar VoiceOver
-![Paso 3](https://github.com/Mia-Salazar/GDGMadrid/blob/main/assets/img/voice-over-2.jpeg)
+![Paso 3](https://github.com/Mia-Salazar/GDGMadrid/blob/main/assets/img/voice-over-3.jpeg)
 
 ## Teclas importantes
 - Control para parar la lectura
