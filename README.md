@@ -13,7 +13,7 @@ Para poder realizar el taller hay que realizar una serie de pasos
 7. Abrir Xampp y pulsar en start en apache
 8. Ir a en tu navegador a http://localhost/GDGMadrid/
 
-![Xampp abierto]([assets/img/xamp.JPG](https://github.com/Mia-Salazar/GDGMadrid/blob/main/assets/img/xamp.JPG))
+![Xampp abierto](https://github.com/Mia-Salazar/GDGMadrid/blob/main/assets/img/xamp.JPG)
 
 ### Linux
 1. Descargar un navegador
