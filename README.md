@@ -4,9 +4,46 @@ En este repositorio encontraremos el proyecto sobre el que tratará el taller "L
 ## Configuraciones iniciales
 Para poder realizar el taller hay que realizar una serie de pasos
 
-1. Instalar [Google Chrome](https://www.google.com/intl/es_es/chrome/)
-2. Inslatar la extensión [Screen Reader](https://chromewebstore.google.com/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=es)
-3. Bajarse este repositorio
+### Windows
+1. Descargar un navegador
+2. Descargar [NVDA](https://nvda.es/descargas/descarga-de-nvda/)
+3. Descargar [XAMP](https://www.apachefriends.org/es/download.html)
+5. Ir a la carpeta `c/xampp/htdocs*`
+6. Hacer el git clone en la carpeta(c o el disco en el que lo hayas instalado)
+7. Abrir Xampp y pulsar en start en apache
+8. Ir a en tu navegador a http://localhost/GDGMadrid/
+
+![Xampp abierto]([assets/img/xamp.JPG](https://github.com/Mia-Salazar/GDGMadrid/blob/main/assets/img/xamp.JPG))
+
+### Linux
+1. Descargar un navegador
+2. Descargar [Orca screen reader](https://orca.gnome.org/)
+3. Descargar [XAMP](https://www.apachefriends.org/es/download.html)
+5. Ir a la carpeta donde hayas instalado Xampp
+6. Ve a /xampp/htdocs* y hacer el git clone
+7. Abrir Xampp y pulsar en start en apache
+8. Ir a en tu navegador a http://localhost/GDGMadrid/
+
+   
+### MacOS
+1. Descargar un navegador
+2. Bajarse el [repo](https://github.com/Mia-Salazar/GDGMadrid)
+3. Coger el index.html y abrirlo con el navegador
+4. Activar VoiceOver
+
+#### Activar Voice over
+Ir a preferencias del sistema y pulsar en accesibilidad
+![Paso 1]([assets/img/xamp.JPG]https://github.com/Mia-Salazar/GDGMadrid/blob/main/assets/img/voice-over-1.jpeg))
+Pulsar en VoiceOver y pulsar en el checkbox de Activar
+![Paso 2]([assets/img/xamp.JPG](https://github.com/Mia-Salazar/GDGMadrid/blob/main/assets/img/voice-over-1.jpeg))
+Pulsar en Usar VoiceOver
+![Paso 3]([assets/img/xamp.JPG](https://github.com/Mia-Salazar/GDGMadrid/blob/main/assets/img/voice-over-1.jpeg))
+
+## Teclas importantes
+- Control para parar la lectura
+- Tab para moverse entre elementos
+- Espacio para activar checkboxes
+- Flechas para activar radio inputs
 
 ## Autoras
 Este taller estará impartido por
