@@ -24,12 +24,6 @@
 	z-index: 1;
 }
 
-.account-dropdown-button {
-	border: none;
-	background: transparent;
-	font-family: var(--primaryTypo);
-}
-
 .dropdown a {
 	font-size: 0.875rem;
 }
@@ -121,10 +115,6 @@
 
 	.dropdown.open {
 		transform: translate(0, 1.438rem);
-	}
-
-	.account-dropdown-button {
-		font-size: 1.25rem;
 	}
 
 	.dropdown li {

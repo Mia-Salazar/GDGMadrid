@@ -28,12 +28,6 @@ function toggleMenu() {
   isMenuOpen = !isMenuOpen;
 }
 
-/*Show on desktop menú*/
-if (window.innerWidth >= 768) {
-  nav.setAttribute("aria-hidden", "false") 
-  nav.classList.remove("hidden");
-}
-
 
 /*Submit*/
 const form = document.getElementById("form");
@@ -58,7 +52,6 @@ foodTypeOrderes.forEach((food) => {
   foodSelect.appendChild(option);
 });
 
-
 /*Range inputs*/
 const rangeInputs = document.querySelectorAll('.range-input')
 const numberInput = document.querySelector('.range-number')
@@ -80,7 +73,6 @@ function handleInputChange(e) {
   const min = target.min
   const max = target.max
   const val = target.value
-  
   target.style.backgroundSize = calculateInputRange(val, min, max);
 }
 
