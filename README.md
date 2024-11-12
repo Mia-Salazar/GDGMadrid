@@ -36,10 +36,10 @@ Ir a preferencias del sistema y pulsar en accesibilidad
 ![Paso 1](https://github.com/Mia-Salazar/GDGMadrid/blob/main/assets/img/voice-over-1.jpeg)
 
 Pulsar en VoiceOver y pulsar en el checkbox de Activar
-![Paso 2](https://github.com/Mia-Salazar/GDGMadrid/blob/main/assets/img/voice-over-1.jpeg)
+![Paso 2](https://github.com/Mia-Salazar/GDGMadrid/blob/main/assets/img/voice-over-2.jpeg)
 
 Pulsar en Usar VoiceOver
-![Paso 3](https://github.com/Mia-Salazar/GDGMadrid/blob/main/assets/img/voice-over-1.jpeg)
+![Paso 3](https://github.com/Mia-Salazar/GDGMadrid/blob/main/assets/img/voice-over-2.jpeg)
 
 ## Teclas importantes
 - Control para parar la lectura
