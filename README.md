@@ -42,10 +42,12 @@ Pulsar en Usar VoiceOver
 ![Paso 3](https://github.com/Mia-Salazar/GDGMadrid/blob/main/assets/img/voice-over-3.jpeg)
 
 ## Teclas importantes
-- Control para parar la lectura
-- Tab para moverse entre elementos
-- Espacio para activar checkboxes
-- Flechas para activar radio inputs
+- Encender NVDA: Control + Alt + N
+- Apagar NVDA: Insert + Q
+- Parar lectura: Control
+- Moverse entre elementos: Tab para
+- Activar checkboxes: Espacio
+- Activar radio inputs: Flechas
 
 ## Autoras
 Este taller estará impartido por
