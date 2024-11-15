@@ -9,7 +9,6 @@ if (toggle) {
 
 let isMenuOpen = false;
 function toggleMenu() {
-  console.log(window.innerWidth)
   if (!isMenuOpen) {
     navList.classList.add("open");
     toggle.classList.add("open");
