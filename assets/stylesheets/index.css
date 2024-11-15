@@ -7,7 +7,6 @@ html {
 	--grayDark: #555;
 	--white: #fff;
 	--black: #0a0a0a;
-	--bg: #eff2f5c2;
 
 	--primaryTypo: 'Teko', sans-serif;
 }
@@ -16,12 +15,9 @@ html {
 body {
 	margin: 0;
 	font-family: sans-serif;
-	font-family: sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
-	color: var(--black);
 }
 
 * {
@@ -36,9 +32,8 @@ p {
 	display:  none;
 }
 
-.main {
+.container {
 	padding: 1.875rem 1rem;
-	margin-bottom: auto;
 }
 
 .img {
