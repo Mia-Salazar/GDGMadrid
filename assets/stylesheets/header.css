@@ -8,34 +8,10 @@
 	font-family: var(--primaryTypo);
 }
 
-.header .title {
+.title {
 	margin: 0;
 	color:  var(--white);
 	font-weight: 500;
-}
-
-/*Mi cuenta dropdown*/
-.dropdown {
-	padding: 0.625rem 0;
-	display: none;
-	flex-direction: column;
-	list-style-type: none;
-	transition: transform 0.25s;
-	z-index: 1;
-}
-
-.dropdown a {
-	font-size: 0.875rem;
-}
-
-.arrow {
-	border: solid var(--white);
-	border-width: 0 3px 3px 0;
-	display: inline-block;
-	padding: 3px;
-	transform: rotate(45deg);
-	margin-left: 5px;
-	margin-bottom: 4px;
 }
 
 .skip-to-content-link {
@@ -93,7 +69,6 @@
 	text-align: center;
 }
 
-
 /*Medias queries*/
 @media (min-width: 768px) {
 	.nav-list a {
@@ -102,23 +77,6 @@
 
 	.nav-list li {
 		padding: 0 0 0 1rem;
-	}
-
-	.dropdown {
-		width: 8.75rem;
-		display: flex;
-		position: absolute;
-		right: 0;
-    	background: var(--primaryColor);
-		transform: translate(0, -150%)
-	}
-
-	.dropdown.open {
-		transform: translate(0, 1.438rem);
-	}
-
-	.dropdown li {
-		padding: 3px 0;
 	}
 }
 
