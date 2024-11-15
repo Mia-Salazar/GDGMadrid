@@ -130,4 +130,8 @@
 	.nav-list.open {
 		transform: translate(0%);
 	}
+
+	.hidden-nav {
+		display: none;
+	}
 }

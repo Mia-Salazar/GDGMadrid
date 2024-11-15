@@ -16,14 +16,14 @@ function toggleMenu() {
     toggle.setAttribute("aria-label", "Cerrar menú")
     toggle.setAttribute("aria-expanded", "true") 
     nav.setAttribute("aria-hidden", "false")
-    nav.classList.remove("hidden");
+    nav.classList.remove("hidden-nav");
   } else {
     navList.classList.remove("open");
     toggle.classList.remove("open");
     toggle.setAttribute("aria-label", "Abrir menú")
     toggle.setAttribute("aria-expanded", "true") 
     nav.setAttribute("aria-hidden", "true")
-    nav.classList.add("hidden");
+    nav.classList.add("hidden-nav");
   }
   isMenuOpen = !isMenuOpen;
 }
