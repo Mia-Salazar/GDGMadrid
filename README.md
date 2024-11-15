@@ -7,29 +7,27 @@ Para poder realizar el taller hay que realizar una serie de pasos
 ### Windows
 1. Descargar un navegador
 2. Descargar [NVDA](https://nvda.es/descargas/descarga-de-nvda/)
-3. Descargar [XAMP](https://www.apachefriends.org/es/download.html)
-5. Ir a la carpeta `c/xampp/htdocs*`
-6. Hacer el git clone en la carpeta(c o el disco en el que lo hayas instalado)
-7. Abrir Xampp y pulsar en start en apache
-8. Ir a en tu navegador a http://localhost/GDGMadrid/
-
-![Xampp abierto](https://github.com/Mia-Salazar/GDGMadrid/blob/main/assets/img/xamp.JPG)
+3. Ir a https://codepen.io/MiaSalazar/pen/RwMabzg
+4. Pulsar en fork, en el menú inferior a la derecha
+5. Usar ese fork para editar el código
+6. Para probar el código ir a la URL cambiando `pen` por `full`, por ejemplo para https://codepen.io/xxxxxx/pen/xxxxx, la URL nueva sería https://codepen.io/xxxxxx/full/xxxxx
 
 ### Linux
 1. Descargar un navegador
 2. Descargar [Orca screen reader](https://orca.gnome.org/)
-3. Descargar [XAMP](https://www.apachefriends.org/es/download.html)
-5. Ir a la carpeta donde hayas instalado Xampp
-6. Ve a /xampp/htdocs* y hacer el git clone
-7. Abrir Xampp y pulsar en start en apache
-8. Ir a en tu navegador a http://localhost/GDGMadrid/
+3. Ir a https://codepen.io/MiaSalazar/pen/RwMabzg
+4. Pulsar en fork, en el menú inferior a la derecha
+5. Usar ese fork para editar el código
+6. Para probar el código ir a la URL cambiando `pen` por `full`, por ejemplo para https://codepen.io/xxxxxx/pen/xxxxx, la URL nueva sería https://codepen.io/xxxxxx/full/xxxxx
 
    
 ### MacOS
 1. Descargar un navegador
-2. Bajarse el [repo](https://github.com/Mia-Salazar/GDGMadrid)
-3. Coger el index.html y abrirlo con el navegador
-4. Activar VoiceOver
+2. Ir a https://codepen.io/MiaSalazar/pen/RwMabzg
+3. Pulsar en fork, en el menú inferior a la derecha
+4. Usar ese fork para editar el código
+5. Para probar el código ir a la URL cambiando `pen` por `full`, por ejemplo para https://codepen.io/xxxxxx/pen/xxxxx, la URL nueva sería https://codepen.io/xxxxxx/full/xxxxx
+6. Activar VoiceOver
 
 #### Activar Voice over
 Ir a preferencias del sistema y pulsar en accesibilidad
