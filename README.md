@@ -11,6 +11,7 @@ Para poder realizar el taller hay que realizar una serie de pasos
 4. Pulsar en fork, en el menú inferior a la derecha
 5. Usar ese fork para editar el código
 6. Para probar el código ir a la URL cambiando `pen` por `full`, por ejemplo para https://codepen.io/xxxxxx/pen/xxxxx, la URL nueva sería https://codepen.io/xxxxxx/full/xxxxx
+7. Ve a la [presentación](https://view.genially.com/670c3dd53bfb21282c583694)
 
 ### Linux
 1. Descargar un navegador
@@ -19,6 +20,7 @@ Para poder realizar el taller hay que realizar una serie de pasos
 4. Pulsar en fork, en el menú inferior a la derecha
 5. Usar ese fork para editar el código
 6. Para probar el código ir a la URL cambiando `pen` por `full`, por ejemplo para https://codepen.io/xxxxxx/pen/xxxxx, la URL nueva sería https://codepen.io/xxxxxx/full/xxxxx
+7. Ve a la [presentación](https://view.genially.com/670c3dd53bfb21282c583694)
 
    
 ### MacOS
@@ -27,7 +29,8 @@ Para poder realizar el taller hay que realizar una serie de pasos
 3. Pulsar en fork, en el menú inferior a la derecha
 4. Usar ese fork para editar el código
 5. Para probar el código ir a la URL cambiando `pen` por `full`, por ejemplo para https://codepen.io/xxxxxx/pen/xxxxx, la URL nueva sería https://codepen.io/xxxxxx/full/xxxxx
-6. Activar VoiceOver
+6. Ve a la [presentación](https://view.genially.com/670c3dd53bfb21282c583694)
+7. Activar VoiceOver
 
 #### Activar Voice over
 Ir a preferencias del sistema y pulsar en accesibilidad
