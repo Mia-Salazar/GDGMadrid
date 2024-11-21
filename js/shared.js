@@ -1,5 +1,4 @@
 /*Hamburguer menu*/
-
 const navList = document.getElementById("navList");
 const toggle = document.getElementById("toggle");
 const nav = document.getElementById("nav");
@@ -13,9 +12,17 @@ function toggleMenu() {
   if (!isMenuOpen) {
     navList.classList.add("open");
     toggle.classList.add("open");
+    toggle.setAttribute("aria-label", "Cerrar menú")
+    toggle.setAttribute("aria-expanded", "true") 
+    nav.setAttribute("aria-hidden", "false")
+    nav.classList.remove("hidden-nav");
   } else {
     navList.classList.remove("open");
     toggle.classList.remove("open");
+    toggle.setAttribute("aria-label", "Abrir menú")
+    toggle.setAttribute("aria-expanded", "true") 
+    nav.setAttribute("aria-hidden", "true")
+    nav.classList.add("hidden-nav");
   }
   isMenuOpen = !isMenuOpen;
 }
@@ -38,10 +45,10 @@ const foodSelect = document.getElementById("foodType");
 
 const foodTypeOrderes = foodType.sort();
 foodTypeOrderes.forEach((food) => {
-    let option = document.createElement("option");
-    option.value = food;
-    option.innerHTML = food;
-    foodSelect.appendChild(option);
+  let option = document.createElement("option");
+  option.value = food;
+  option.innerHTML = food;
+  foodSelect.appendChild(option);
 });
 
 /*Range inputs*/
@@ -65,7 +72,6 @@ function handleInputChange(e) {
   const min = target.min
   const max = target.max
   const val = target.value
-
   target.style.backgroundSize = calculateInputRange(val, min, max);
 }
 

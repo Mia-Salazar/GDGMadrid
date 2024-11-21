@@ -20,8 +20,10 @@ body {
     justify-content: space-between;
 }
 
-* {
-	outline: none !important;
+.logo-text {
+	font-family: var(--primaryTypo);
+	font-size:  1.25rem;
+	font-weight: 500;
 }
 
 p {
@@ -109,11 +111,6 @@ p {
 	display: flex;
 	width: 2.625rem;
 	margin: 0 2px 0 2px;
-}
-
-/*Form*/
-input:focus, textarea:focus, select:focus {
-    outline: none;
 }
 
 .input-group {
